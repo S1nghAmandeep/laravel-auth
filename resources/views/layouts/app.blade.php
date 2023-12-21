@@ -47,14 +47,7 @@
                             <a class="nav-link" href="{{ route('admin.projects.index') }}">{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/') }}">{{ __('Show') }}</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.projects.create') }}">{{ __('Create') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('/') }}">{{ __('Edit') }}</a>
-
                         </li>
                     </ul>
 

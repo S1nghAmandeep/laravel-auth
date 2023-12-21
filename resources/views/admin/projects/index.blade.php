@@ -10,6 +10,8 @@
                         <th>Title</th>
                         <th>Project Link</th>
                         <th>Language</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +21,12 @@
                             <td>{{ $project->title }}</td>
                             <td><a href="#">{{ $project->link_project }}</a></td>
                             <td>{{ $project->language }}</td>
+                            <td><a class="btn btn-primary btn-sm" href="{{ route('admin.projects.edit', $project) }}">edit</a></td>
+                            <td>
+                                <form action="{{}}">
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     @empty
                         <tr>
