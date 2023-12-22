@@ -30,7 +30,11 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $new_project = Project::create($data);
+
+        return redirect()->route('admin.projects.show', $new_project);
     }
 
     /**
@@ -54,7 +58,10 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $data = $request->all();
+        $project->update($data);
+
+        return redirect()->route('admin.projects.show', $project);
     }
 
     /**
@@ -62,6 +69,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route('admin.projects.index');
     }
 }
